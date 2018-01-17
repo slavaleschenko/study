@@ -4,7 +4,7 @@
 
 
 import UIKit
-/*
+
 let restaurantLocation = (2, 4)
 let restaurantRange = 2.5
 
@@ -145,7 +145,7 @@ public struct Int : SignedInteger, Comparable, Equatable {
 // Conforming to a protocol. We updated DeliveryAreaUpdated on line 88, with a description on line 92
 
 print(area1)
-*/
+
 // CHALLENGES 1 tic-tac-toe
 
 typealias BoardPiece = String
