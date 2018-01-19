@@ -199,7 +199,10 @@ struct TShirt: CustomStringConvertible {
         return("T-Shirt is \(color) color, \(size) size, made from high quality \(material).")
     }
     
-    func price() -> Double {
+    func price() -> Double? {
+        if sizePriceCalculation(on: size) == nil || materialPriceCalculation(on: material) == nil {
+            return nil
+        }
         return startPrice + sizePriceCalculation(on: size)! + materialPriceCalculation(on: material)!
     }
 }
