@@ -153,6 +153,12 @@ typealias BoardPiece = String
 let X: BoardPiece = "X"
 let O: BoardPiece = "O"
 
+struct Point {
+    var x: Int
+    var y: Int
+}
+
+
 
 
 // CHALLENGES 2 Tshirt Struct
@@ -162,11 +168,9 @@ let startPrice: Double = 35.0
 func sizePriceCalculation(on: String) -> Double? {
     var sizePrice: Double = 0
     switch on {
-    case "XS":
-        sizePrice = startPrice
-    case "S":
-        sizePrice = startPrice
-    case "M":
+    case "XS",
+         "S",
+         "M":
         sizePrice = startPrice
     case "L":
         sizePrice = startPrice*0.25
@@ -210,5 +214,9 @@ struct TShirt: CustomStringConvertible {
 var tShirtForSlava = TShirt(size: "L", color: "red", material: "wool")
 
 tShirtForSlava.price()
+
+
+// CHALLENGE 3
+
 
 
