@@ -4,7 +4,7 @@
 
 
 import UIKit
-
+/*
 let restaurantLocation = (2, 4)
 let restaurantRange = 2.5
 
@@ -145,7 +145,7 @@ public struct Int : SignedInteger, Comparable, Equatable {
 // Conforming to a protocol. We updated DeliveryAreaUpdated on line 88, with a description on line 92
 
 print(area1)
-
+*/
 // CHALLENGES 1 tic-tac-toe
 
 typealias BoardPiece = String
@@ -157,6 +157,40 @@ let O: BoardPiece = "O"
 
 // CHALLENGES 2 Tshirt Struct
 
+let startPrice: Double = 35.0
+
+func sizePriceCalculation(on: String) -> Double? {
+    var sizePrice: Double = 0
+    switch on {
+    case "XS":
+        sizePrice = startPrice
+    case "S":
+        sizePrice = startPrice
+    case "M":
+        sizePrice = startPrice
+    case "L":
+        sizePrice = startPrice*0.25
+    case "XL":
+        sizePrice = startPrice*0.5
+    default:
+        return nil
+    }
+    return sizePrice
+}
+
+func materialPriceCalculation(on: String) -> Double? {
+    var materialPrice: Double = 0
+    switch on {
+    case "wool":
+        materialPrice = startPrice*0.3
+    case "cotton":
+        materialPrice
+    default:
+        return nil
+    }
+    return materialPrice
+}
+
 struct TShirt: CustomStringConvertible {
     var size: String
     var color: String
@@ -166,25 +200,8 @@ struct TShirt: CustomStringConvertible {
     }
     
     func price() -> Double {
-        let standartPrice: Double = 35
-        var finalPrice: Double = 35
-        let sizeDict = ["XS": 1, "S": 1, "M": 1, "L": 1.25, "XL": 1.5]
-        for s in sizeDict.keys {
-            if s == size {
-                let coefficientSize = sizeDict[s]
-                finalPrice = standartPrice * coefficientSize!
-            }
-        }
-        let materialDict = ["wool": 1.3, "cotton": 1]
-        for m in materialDict.keys {
-            if m == material {
-                let coefficientMaterial = materialDict[m]
-                finalPrice = finalPrice + standartPrice * (coefficientMaterial! - 1)
-            }
-        }
-        return finalPrice
+        return startPrice + sizePriceCalculation(on: size)! + materialPriceCalculation(on: material)!
     }
-    
 }
 
 var tShirtForSlava = TShirt(size: "L", color: "red", material: "wool")
