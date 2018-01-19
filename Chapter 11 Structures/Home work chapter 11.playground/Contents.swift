@@ -148,16 +148,33 @@ print(area1)
 */
 // CHALLENGES 1 tic-tac-toe
 
-typealias BoardPiece = String
-
-let X: BoardPiece = "X"
-let O: BoardPiece = "O"
-
-struct Point {
-    var x: Int
-    var y: Int
+struct Board {
+    typealias BoardPiece = String
+    let X: BoardPiece = "X"
+    let O: BoardPiece = "O"
+    
+    func move(coordinates: (Int, Int), player: BoardPiece) -> Int? {
+        let point = coordinates
+        var fieldIndex = Int()
+        switch point {
+        case (0, 0):
+            fieldIndex = 0
+        case (0, 1):
+            fieldIndex = 1
+        case (0, 2):
+            fieldIndex = 2
+        case (1, 0):
+            fieldIndex = 3
+        default:
+            print("error")
+        }
+        return 0
+    }
 }
 
+let b = Board()
+
+b.move(coordinates: (0, 0), player: "X")
 
 
 
