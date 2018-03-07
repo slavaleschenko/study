@@ -6,17 +6,29 @@
 //  Copyright © 2018 SlavaLes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct RidersStats: Decodable {
+class RidersStats: Codable {
     let name: String?
     let number: String?
     let bike: String?
     let team: String?
+    
+    init(name: String?, number: String?, bike: String?, team: String?) {
+        self.name = name
+        self.number = number
+        self.bike = bike
+        self.team = team
+    }
+    
 }
 
-struct GlobalStats: Decodable {
+class ItemsStats: Codable {
     let items: [RidersStats]
+    
+    init(items: [RidersStats]) {
+        self.items = items
+    }
 }
 
 

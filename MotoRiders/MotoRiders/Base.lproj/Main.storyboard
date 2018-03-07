@@ -18,10 +18,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VkD-Mk-Hmk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkD-Mk-Hmk">
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RidersCell" rowHeight="103" id="EIL-w8-JTm" customClass="RidersCell" customModule="MotoRiders" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EIL-w8-JTm" id="2rR-My-fZc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT0-Qo-KDt">
+                                                    <rect key="frame" x="8" y="8" width="367" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="9YM-dB-JRn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike and number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLk-OL-Dk5">
+                                                    <rect key="frame" x="8" y="74.333333333333329" width="367" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ep8-aO-rYu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-ww-CZS">
+                                                    <rect key="frame" x="8" y="42.333333333333336" width="367" height="24.000000000000007"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="z48-x8-g8v"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gLk-OL-Dk5" firstAttribute="top" secondItem="b0B-ww-CZS" secondAttribute="bottom" constant="8" id="0Xg-mn-NtR"/>
+                                                <constraint firstAttribute="trailing" secondItem="b0B-ww-CZS" secondAttribute="trailing" id="H4r-UR-CI2"/>
+                                                <constraint firstItem="b0B-ww-CZS" firstAttribute="top" secondItem="AT0-Qo-KDt" secondAttribute="bottom" constant="8" id="HGZ-Cf-7il"/>
+                                                <constraint firstItem="AT0-Qo-KDt" firstAttribute="top" secondItem="2rR-My-fZc" secondAttribute="top" constant="8" id="PyH-WT-0OX"/>
+                                                <constraint firstAttribute="trailing" secondItem="AT0-Qo-KDt" secondAttribute="trailing" id="TJS-OK-XGk"/>
+                                                <constraint firstAttribute="trailing" secondItem="gLk-OL-Dk5" secondAttribute="trailing" id="VSQ-Lb-a9K"/>
+                                                <constraint firstItem="b0B-ww-CZS" firstAttribute="leading" secondItem="2rR-My-fZc" secondAttribute="leading" constant="8" id="bqp-HE-Mz3"/>
+                                                <constraint firstItem="AT0-Qo-KDt" firstAttribute="leading" secondItem="2rR-My-fZc" secondAttribute="leading" constant="8" id="sj3-d2-m3Z"/>
+                                                <constraint firstItem="gLk-OL-Dk5" firstAttribute="leading" secondItem="2rR-My-fZc" secondAttribute="leading" constant="8" id="y9R-Bz-Z3j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="bikeAndNumberLabel" destination="gLk-OL-Dk5" id="Nfv-fk-wl9"/>
+                                            <outlet property="nameLabel" destination="AT0-Qo-KDt" id="GWE-T3-wUB"/>
+                                            <outlet property="teamLabel" destination="b0B-ww-CZS" id="CXp-13-acj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

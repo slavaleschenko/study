@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84521FBB20500BC300BE3E0B /* RidersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521FBA20500BC300BE3E0B /* RidersCell.swift */; };
 		84696B4020495112004B9184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84696B3F20495112004B9184 /* AppDelegate.swift */; };
 		84696B4220495112004B9184 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84696B4120495112004B9184 /* ViewController.swift */; };
 		84696B4520495112004B9184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84696B4320495112004B9184 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84521FBA20500BC300BE3E0B /* RidersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersCell.swift; sourceTree = "<group>"; };
 		84696B3C20495112004B9184 /* MotoRiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotoRiders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84696B3F20495112004B9184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84696B4120495112004B9184 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				84696B3F20495112004B9184 /* AppDelegate.swift */,
 				84696B4120495112004B9184 /* ViewController.swift */,
 				84696B51204952E0004B9184 /* Riders.swift */,
+				84521FBA20500BC300BE3E0B /* RidersCell.swift */,
 				84696B4320495112004B9184 /* Main.storyboard */,
 				84696B4620495112004B9184 /* Assets.xcassets */,
 				84696B4820495112004B9184 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84521FBB20500BC300BE3E0B /* RidersCell.swift in Sources */,
 				84696B4220495112004B9184 /* ViewController.swift in Sources */,
 				84696B52204952E0004B9184 /* Riders.swift in Sources */,
 				84696B4020495112004B9184 /* AppDelegate.swift in Sources */,
